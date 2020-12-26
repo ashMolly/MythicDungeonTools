@@ -1,4 +1,6 @@
 -- Made by Nnoggie, 2017-2020
+-- RIP Dungeon NPC Data, 2017-2020
+-- It was a pleasure to use that add-on, sadly it is pay 2 use now.
 local AddonName, MDT = ...
 local L = MDT.L
 local mainFrameStrata = "HIGH"
@@ -2275,7 +2277,7 @@ end
 
 ---IsCurrentPresetFortified
 function MDT:IsCurrentPresetFortified()
-    return self:GetCurrentPreset().week%2 == 0
+    return not MDT:IsCurrentPresetFortified()
 end
 
 ---IsCurrentPresetTyrannical
