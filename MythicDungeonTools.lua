@@ -2824,7 +2824,6 @@ function MDT:EnsureDBTables()
 	end
 
     --removed clones: remove data from presets
-    if next(db.dungeonImport) then
         for pullIdx,pull in pairs(preset.value.pulls) do
             for enemyIdx,clones in pairs(pull) do
 
@@ -2877,7 +2876,6 @@ function MDT:EnsureDBTables()
     if preset.value.currentSublevel > maxSublevel then preset.value.currentSublevel = maxSublevel end
     --make sure teeeming flag is set
     preset.value.teeming = MDT:IsWeekTeeming(preset.week)
-end
 
 function MDT:GetTileFormat(dungeonIdx)
     local mapInfo = MDT.mapInfo[dungeonIdx]
